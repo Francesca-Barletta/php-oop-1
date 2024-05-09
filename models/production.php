@@ -1,16 +1,19 @@
 <?php
+include_once __DIR__ . '/genre.php';
 
-class Production
+class Production 
 {
     public $title;
     public $language;
     public $vote;
-    function __construct($_title, $_language, $_vote )
+    public $genre;
+    function __construct($_title, $_language, $_vote, Genre $_genre)
     {
         $this->title = $_title;
         $this->language = $_language;
         $this->setvote($_vote);
-
+        $this->genre = $_genre;
+        
     }
 
     public function setvote($vote)

@@ -29,6 +29,8 @@
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item">Lingua: {{ movie.language }}  </li>
                         <li class="list-group-item">Voto: {{ movie.vote }}</li>
+                        <li class="list-group-item">Regista: {{ movie.genre.name }}</li>
+                        <li class="list-group-item">Descrizione: {{ movie.genre.description }}</li>
                       </ul>
                     </div>
                 </div>
