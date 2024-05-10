@@ -11,15 +11,14 @@ createApp({
   methods: {
     fetchProductions(){
         axios.get('./db.php').then((res) => {
-         
-          this.movies = res.data;
-          console.log(res.data);
+       console.log(res.data);
+       this.movies = res.data;
+      //  console.log(this.movies);
         })
     }
 
   },
   created(){
     this.fetchProductions();
-   
   }
 }).mount('#app')

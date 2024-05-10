@@ -20,7 +20,7 @@
         </header>
         <main>
           <div class="container">
-            <div class="row">
+            <div class="row py-2">
                 <div class="col" v-for="movie in movies">
                     <div class="card" style="width: 18rem;">
                       <div class="card-header">
@@ -31,8 +31,10 @@
                         <li class="list-group-item">Voto: {{ movie.vote }}</li>
                         <li class="list-group-item">Regista: {{ movie.genre.name }}</li>
                         <li class="list-group-item">Descrizione: {{ movie.genre.description }}</li>
-                        <li class="list-group-item">Profitti: {{ movie.profits }}</li>
-                        <li class="list-group-item">Durata: {{ movie.duration }}</li>
+                        <li v-if="movie.profits" class="list-group-item">Profitti: {{ movie.profits }}</li>
+                        <li v-if="movie.duration" class="list-group-item">Durata: {{ movie.duration }}</li>
+                        <li v-if="movie.numberOfSeasons" class="list-group-item">Stagioni: {{ movie.numberOfSeasons }}</li>
+
 
                       </ul>
                     </div>

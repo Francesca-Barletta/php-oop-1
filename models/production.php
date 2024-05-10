@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . '/genre.php';
+include_once __DIR__ . '/Genre.php';
 
 class Production 
 {
