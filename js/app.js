@@ -4,15 +4,16 @@ createApp({
   data() {
     return {
       message: 'PHP OOP',
-      productions: []
+      productions: [],
+      movies: []
     }
   },
   methods: {
     fetchProductions(){
         axios.get('./db.php').then((res) => {
          
-            this.productions = res.data;
-           
+          this.movies = res.data;
+          console.log(res.data);
         })
     }
 
