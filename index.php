@@ -20,23 +20,21 @@
         </header>
         <main>
           <div class="container">
-            <div class="row py-2">
-                <div class="col" v-for="movie in movies">
+            <div class="row row-cols-3">
+                <div class="col py-2" v-for="movie in movies">
                     <div class="card" style="width: 18rem;">
-                      <div class="card-header">
-                        {{ movie.title }}
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Lingua: {{ movie.language }}  </li>
-                        <li class="list-group-item">Voto: {{ movie.vote }}</li>
-                        <li class="list-group-item">Regista: {{ movie.genre.name }}</li>
-                        <li class="list-group-item">Descrizione: {{ movie.genre.description }}</li>
-                        <li v-if="movie.profits" class="list-group-item">Profitti: {{ movie.profits }}</li>
-                        <li v-if="movie.duration" class="list-group-item">Durata: {{ movie.duration }}</li>
-                        <li v-if="movie.numberOfSeasons" class="list-group-item">Stagioni: {{ movie.numberOfSeasons }}</li>
-
-
-                      </ul>
+                    <img :src="movie.poster" class="card-img-top" style="width: 100%;" alt="">
+                      <div class="card-body"> 
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"> {{ movie.title }}</li>
+                          <li class="list-group-item">Lingua: {{ movie.language }}  </li>
+                          <li class="list-group-item">Voto: {{ movie.vote }}</li>
+                          <li class="list-group-item">Regista: {{ movie.genre.name }}</li>
+                          <li class="list-group-item">Descrizione: {{ movie.genre.description }}</li>
+                          <li v-if="movie.profits" class="list-group-item">Profitti: {{ movie.profits }}</li>
+                          <li v-if="movie.duration" class="list-group-item">Durata: {{ movie.duration }}</li>
+                          <li v-if="movie.numberOfSeasons" class="list-group-item">Stagioni: {{ movie.numberOfSeasons }}</li>
+                        </ul>
                     </div>
                 </div>
         

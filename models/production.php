@@ -7,11 +7,13 @@ class Production
     public $language;
     public $vote;
     public $genre;
-    function __construct($_title, $_language, $_vote, Genre $_genre)
+    public $poster;
+    function __construct($_title, $_language, $_vote, $_poster, Genre $_genre)
     {
         $this->title = $_title;
         $this->language = $_language;
         $this->setvote($_vote);
+        $this->poster = $_poster;
         $this->genre = $_genre;
         
     }
