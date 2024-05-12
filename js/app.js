@@ -5,16 +5,25 @@ createApp({
     return {
       message: 'PHP OOP',
       productions: [],
-      movies: []
+      movie: null,
+      isOpen: false,
     }
   },
   methods: {
     fetchProductions(){
         axios.get('./db.php').then((res) => {
        console.log(res.data);
-       this.movies = res.data;
+       this.productions = res.data;
       //  console.log(this.movies);
         })
+    },
+    openModal(movie){
+      this.movie = movie;
+      this.isOpen = true;
+    },
+    closeModal(){
+      this.isOpen = false;
+      this.movie = null;
     }
 
   },

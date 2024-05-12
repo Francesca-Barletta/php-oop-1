@@ -13,5 +13,3 @@ class TvSerie extends Production
     } 
 }
 
-// $serie1 = new TvSerie('big bang theory', 'inglese', 7, new Genre('boh', 'amici nerd'), 6);
-// var_dump($serie1);

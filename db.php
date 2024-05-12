@@ -11,7 +11,7 @@ include_once __DIR__ . '/Models/TvSerie.php';
 //     new Production('Interstellar','inglese', 7.5, new Genre('Nolan','fantascenza')),
 // ];
 
-$movies = [
+$productions = [
     new Movie('Ritorno al futuro', 'Inglese', 9,'https://static.posters.cz/image/1300/poster/ritorno-al-futuro-film-i149545.jpg', new Genre('Zemekis', 'viaggio nel tempo'), 1000000, 90),
     new Movie('Titanic', 'Inglese', 8, 'https://m.media-amazon.com/images/I/71kfzNYWKxL._AC_UF894,1000_QL80_.jpg', new Genre('Cameron', 'drammatico'), 1300000, 120),
     new Movie('Interstellar','inglese', 7.5, 'https://static.posters.cz/image/750/poster/interstellar-ice-walk-i23290.jpg', new Genre('Nolan','fantascenza'), 800000, 110),
@@ -23,14 +23,13 @@ $movies = [
 ];
 
 header('Content-type: application/json');
-echo json_encode($movies);
+echo json_encode($productions);
 
 
 $data = [
   
-    'res' => $movies,
+    'res' => $productions,
     'success' => true
 ];
 json_encode($data);
 
-// echo $productions;

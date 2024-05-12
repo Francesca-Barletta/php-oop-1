@@ -14,7 +14,3 @@ class Movie extends Production
         $this->duration = $_duration;
     } 
 }
-
-// $ciao = new Movie('ciao', 'ciao', 9, new Genre('ciao', 'ciao'), 9, 10);
-
-// var_dump($ciao);
